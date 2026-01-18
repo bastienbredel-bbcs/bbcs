@@ -102,9 +102,28 @@ body {
 }
 
 .btn-primary {
-    background: var(--gold);
-    color: #0b0f14;
+  background: linear-gradient(
+    135deg,
+    #b8923e 0%,
+    #c8a24a 50%,
+    #e2c67a 100%
+  );
+  color: #0b0f14;
+  box-shadow: 
+    0 6px 18px rgba(200,162,74,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.25);
 }
+
+.btn-primary:hover {
+  background: linear-gradient(
+    135deg,
+    #a88334 0%,
+    #b8923e 50%,
+    #d9bc6b 100%
+  );
+  transform: translateY(-1px);
+}
+
 
 .btn-primary:hover {
     background: var(--gold-hover);
@@ -225,7 +244,7 @@ footer a:hover {
 }
 
 .brand img {
-  height: 44px; /* ajuste 38–52 selon rendu */
+  height: 52px; /* ajuste 38–52 selon rendu */
   width: auto;
   display: block;
 }
@@ -260,8 +279,9 @@ footer a:hover {
 }
 
 @media (max-width: 720px) {
-  .brand img { height: 38px; }
+  .brand img { height: 42px; }
   .nav { display: none; } /* ultra clean sur mobile */
   .hero { padding: 90px 0 70px; background-position: center; }
 }
+
 
