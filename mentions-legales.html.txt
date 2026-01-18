@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mentions légales – BBCS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<section class="section">
+    <div class="container">
+        <h1>Mentions légales</h1>
+
+        <p><strong>BBCS – Bastien Bredel Consulting Security</strong><br>
+        Responsable de la publication : Bastien Bredel<br>
+        Contact : <a href="mailto:bastienbredel.bbcs@gmail.com">bastienbredel.bbcs@gmail.com</a></p>
+
+        <p>
+            Le présent site a pour objet la présentation des activités de conseil
+            et d’audit en sûreté et sécurité.
+        </p>
+
+        <h2>Hébergement</h2>
+        <p>
+            Netlify, Inc.<br>
+            2325 3rd Street, Suite 296<br>
+            San Francisco, California 94107 – États-Unis<br>
+            <a href="https://www.netlify.com" target="_blank">www.netlify.com</a>
+        </p>
+
+        <h2>Données personnelles</h2>
+        <p>
+            Ce site ne collecte aucune donnée personnelle.
+            Aucun formulaire, cookie ou outil de mesure d’audience n’est utilisé.
+        </p>
+
+        <p>
+            Conformément au Règlement Général sur la Protection des Données (RGPD),
+            vous disposez d’un droit d’accès, de rectification et de suppression
+            des données vous concernant.
+        </p>
+
+        <p>
+            Toute demande peut être adressée par email à l’adresse indiquée ci-dessus.
+        </p>
+    </div>
+</section>
+
+</body>
+</html>
