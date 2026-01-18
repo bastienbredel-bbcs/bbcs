@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBCS – Bastien Bredel Consulting Security</title>
+    <meta name="description" content="Audits et conseil en sûreté et sécurité. Approche indépendante, pragmatique et premium. Marseille, PACA et France entière.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero">
+    <div class="container">
+        <h1>Audits et conseil en sûreté & sécurité</h1>
+        <p class="subtitle">
+            Une vision claire, des mesures concrètes, un niveau d’exigence premium.
+        </p>
+        <a href="mailto:contact@bbcs.fr" class="btn-primary">Demander un premier échange</a>
+    </div>
+</header>
+
+<section class="section">
+    <div class="container">
+        <h2>BBCS – Bastien Bredel Consulting Security</h2>
+        <p>
+            BBCS accompagne les professionnels dans l’analyse, l’évaluation et
+            l’optimisation de leur niveau de sûreté et de sécurité.
+        </p>
+        <p>
+            L’approche repose sur des audits indépendants, pragmatiques et orientés
+            terrain, permettant d’identifier les vulnérabilités réelles et de proposer
+            des solutions adaptées aux usages, aux contraintes et aux enjeux de chaque structure.
+        </p>
+    </div>
+</section>
+
+<section class="section light">
+    <div class="container">
+        <h2>Prestations</h2>
+        <ul class="services">
+            <li>Audit de sûreté et sécurité bâtimentaire</li>
+            <li>Analyse des dispositifs de sécurité existants</li>
+            <li>Audit des usages et des procédures internes</li>
+            <li>Évaluation des risques liés à la malveillance et aux intrusions</li>
+            <li>Sensibilisation et conseil en gestion des risques</li>
+            <li>Première approche des risques cyber liés aux usages professionnels</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Méthodologie</h2>
+        <p>
+            Chaque mission débute par une phase d’observation et d’analyse globale,
+            intégrant les aspects humains, organisationnels et techniques.
+        </p>
+        <p>
+            Les constats sont ensuite traduits en recommandations claires,
+            hiérarchisées et directement exploitables, sans complexifier inutilement
+            l’existant.
+        </p>
+        <p>
+            L’objectif n’est pas d’empiler des solutions, mais de renforcer
+            l’efficacité réelle du dispositif de sécurité.
+        </p>
+    </div>
+</section>
+
+<section class="section light">
+    <div class="container">
+        <h2>Zone d’intervention</h2>
+        <p>
+            Basé à Marseille, BBCS intervient principalement en région PACA
+            et accompagne également des structures partout en France selon les besoins.
+        </p>
+    </div>
+</section>
+
+<section class="section contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>
+            Pour un premier échange ou une demande d’audit, vous pouvez me contacter directement.
+        </p>
+        <a href="mailto:contact@bbcs.fr" class="btn-secondary">Écrire un email</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2026 – BBCS | Bastien Bredel Consulting Security</p>
+    </div>
+</footer>
+
+</body>
+</html>
