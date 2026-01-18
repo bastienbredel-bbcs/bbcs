@@ -324,9 +324,9 @@ footer a:hover {
 }
 
 .footer-mark {
-  height: 34px;
+  height: 24px;
   width: auto;
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
 .footer-title {
@@ -380,3 +380,4 @@ footer a:hover {
   border-color: rgba(200,162,74,0.35);
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
+
