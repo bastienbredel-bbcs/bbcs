@@ -101,3 +101,11 @@ footer {
     padding: 30px 0;
     font-size: 14px;
 }
+
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+footer a:hover {
+    text-decoration: none;
+}
