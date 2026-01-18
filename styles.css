@@ -202,3 +202,60 @@ footer a:hover {
 .argument p {
     margin-bottom: 0;
 }
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(11,15,20,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.brand img {
+  height: 44px; /* ajuste 38–52 selon rendu */
+  width: auto;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.nav a:hover {
+  color: var(--text-main);
+}
+
+.nav-cta {
+  padding: 10px 14px;
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  color: var(--gold) !important;
+}
+
+.nav-cta:hover {
+  background: var(--gold);
+  color: #0b0f14 !important;
+}
+
+@media (max-width: 720px) {
+  .brand img { height: 38px; }
+  .nav { display: none; } /* ultra clean sur mobile */
+  .hero { padding: 90px 0 70px; background-position: center; }
+}
