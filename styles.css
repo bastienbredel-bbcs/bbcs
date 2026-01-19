@@ -534,6 +534,8 @@ a:hover {
   text-transform: uppercase;
   position: relative;
   padding-left: 56px;
+  margin-bottom: 24px;
+  color: var(--text-main);
 }
 
 /* trait avant le titre */
@@ -550,6 +552,7 @@ a:hover {
     rgba(200,162,74,0.9)
   );
 }
+
 
 
 
