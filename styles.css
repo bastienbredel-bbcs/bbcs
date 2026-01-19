@@ -179,7 +179,8 @@ a:hover {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
-  margin-top: 18px;
+  justify-content: center; /* CENTRAGE */
+  margin-top: 28px;
 }
 
 /* =========================================================
@@ -551,6 +552,7 @@ footer {
     gap: 14px;
   }
 }
+
 
 
 
