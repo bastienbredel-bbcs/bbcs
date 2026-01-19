@@ -449,6 +449,15 @@ a:hover {
   transform: translateY(-1px);
 }
 
+/* ===== E / LEAD PARAGRAPH ===== */
+.lead{
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-main);
+  max-width: 780px;
+}
+
+
 
 
 
