@@ -70,6 +70,8 @@ body {
     max-width: 800px;
     margin-bottom: 20px;
     color: var(--text-muted);
+    text-align: justify;
+    text-indent: 1.6em; /* alinéa */
 }
 
 /* LISTES SERVICES */
@@ -552,6 +554,7 @@ a:hover {
     rgba(200,162,74,0.9)
   );
 }
+
 
 
 
