@@ -1,147 +1,232 @@
-/* RESET */
+/* =========================================================
+   01) RESET
+========================================================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* VARIABLES COULEURS */
+/* =========================================================
+   02) VARIABLES
+========================================================= */
 :root {
-    --bg-main: #0b0f14;        /* noir profond */
-    --bg-secondary: #121826;   /* sections alternées */
-    --bg-card: rgba(255,255,255,0.04);
-    --text-main: #e8edf4;
-    --text-muted: #b7c0cc;
-    --gold: #c8a24a;
-    --gold-hover: #b8923e;
-    --border: rgba(255,255,255,0.12);
+  --bg-main: #0b0f14;        /* noir profond */
+  --bg-secondary: #121826;   /* sections alternées */
+  --bg-card: rgba(255,255,255,0.04);
+
+  --text-main: #e8edf4;
+  --text-muted: #b7c0cc;
+
+  --gold: #c8a24a;
+  --gold-hover: #b8923e;
+
+  --border: rgba(255,255,255,0.12);
 }
 
-/* BASE */
+/* =========================================================
+   03) BASE / LAYOUT
+========================================================= */
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    color: var(--text-main);
-    line-height: 1.6;
-    background-color: var(--bg-main);
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text-main);
+  line-height: 1.6;
+  background-color: var(--bg-main);
 }
 
 .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 20px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
 }
 
-/* HERO */
+/* =========================================================
+   04) LIENS (GLOBAL)
+========================================================= */
+a {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--gold-hover);
+  text-decoration: none;
+}
+
+/* =========================================================
+   05) EN-TETE / TOPBAR
+========================================================= */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(11,15,20,0.88);
+  backdrop-filter: blur(10px);
+}
+
+/* Ligne or premium sous la topbar */
+.topbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(200,162,74,0.25) 15%,
+    rgba(200,162,74,0.65) 50%,
+    rgba(200,162,74,0.25) 85%,
+    transparent 100%
+  );
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.brand img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.nav a:hover {
+  color: var(--text-main);
+}
+
+.nav-cta {
+  padding: 10px 14px;
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  color: var(--gold) !important;
+  text-decoration: none;
+}
+
+.nav-cta:hover {
+  background: var(--gold);
+  color: #0b0f14 !important;
+}
+
+/* =========================================================
+   06) HERO
+========================================================= */
 .hero {
-    color: var(--text-main);
-    padding: 120px 0 100px;
+  color: var(--text-main);
+  padding: 120px 0 100px;
 
-    background-image:
-      linear-gradient(90deg, rgba(11,15,20,0.92) 0%, rgba(11,15,20,0.75) 45%, rgba(11,15,20,0.55) 100%),
-      url("images/hero-banner.png");
-
-    background-size: cover;
-    background-position: center right;
-    background-repeat: no-repeat;
+  background-image:
+    linear-gradient(90deg, rgba(11,15,20,0.92) 0%, rgba(11,15,20,0.75) 45%, rgba(11,15,20,0.55) 100%),
+    url("images/hero-banner.png");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
 }
 
 .hero h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
+  font-size: 42px;
+  margin-bottom: 20px;
 }
 
+/* Kicker du hero */
+.kicker {
+  opacity: 0.8;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 14px;
+  color: var(--text-muted);
+}
+
+/* Texte hero : justification + alinéa (comme tu le veux) */
 .hero p {
   text-align: justify;
-  text-indent: 1.6em; /* alinéa */
+  text-indent: 1.6em;
 }
 
+/* MAIS on évite l’alinéa sur le kicker */
+.hero .kicker {
+  text-indent: 0;
+}
+
+/* Subtitle hero */
 .subtitle {
-    font-size: 20px;
-    margin-bottom: 30px;
-    max-width: 700px;
-    color: var(--text-muted);
+  font-size: 20px;
+  margin-bottom: 30px;
+  max-width: 700px;
+  color: var(--text-muted);
 }
 
-/* SECTIONS */
+/* CTA hero */
+.hero-cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+/* =========================================================
+   07) SECTIONS (structure)
+========================================================= */
 .section {
-    padding: 80px 0;
+  padding: 80px 0;
 }
 
 .section.light {
-    background-color: var(--bg-secondary);
+  background-color: var(--bg-secondary);
 }
 
-.section p {
-    max-width: 800px;
-    margin-bottom: 20px;
-    color: var(--text-muted);
-    text-align: justify;
-    text-indent: 1.6em; /* alinéa */
+/* =========================================================
+   08) TITRES DE SECTION (H2) + VARIANTE CONTACT
+========================================================= */
+.section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 56px;
+  margin-bottom: 24px;
+  color: var(--text-main);
 }
 
-/* LISTES SERVICES */
-.services {
-    list-style: none;
-    max-width: 800px;
+/* trait avant le titre */
+.section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(200,162,74,0.0),
+    rgba(200,162,74,0.9)
+  );
 }
 
-.services li {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border);
-}
-
-/* BOUTONS */
-.btn-primary,
-.btn-secondary {
-    display: inline-block;
-    padding: 14px 28px;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 4px;
-    /* option "tres chic" : transition plus douce */
-    transition: all 0.25s ease;
-}
-
-.btn-primary {
-    background: linear-gradient(
-      135deg,
-      #b8923e 0%,
-      #c8a24a 50%,
-      #e2c67a 100%
-    );
-    color: #0b0f14;
-    box-shadow:
-      0 6px 18px rgba(200,162,74,0.25),
-      inset 0 1px 0 rgba(255,255,255,0.25);
-}
-
-.btn-primary:hover {
-    background: linear-gradient(
-      135deg,
-      #a88334 0%,
-      #b8923e 50%,
-      #d9bc6b 100%
-    );
-    transform: translateY(-1px);
-}
-
-.btn-secondary {
-    border: 2px solid var(--gold);
-    color: var(--gold);
-}
-
-.btn-secondary:hover {
-    background: var(--gold);
-    color: #0b0f14;
-}
-
-/* CONTACT */
+/* Variante – titre Contact centré avec trait avant/après */
 .contact {
-    text-align: center;
+  text-align: center;
 }
-/* =========================
-   VARIANTE – TITRE CONTACT
-========================= */
+
 .contact h2 {
   padding-left: 0;
   text-align: center;
@@ -162,216 +247,180 @@ body {
   margin: 0 12px;
 }
 
+/* On neutralise le comportement "position:absolute" sur ::before dans contact */
 .contact h2::before {
-  margin-left: 0;
   position: static;
+  margin-left: 0;
 }
 
-/* FOOTER */
-footer {
-    background: #080b10;
-    color: var(--text-muted);
-    text-align: center;
-    padding: 30px 0;
-    font-size: 14px;
+/* =========================================================
+   09) TEXTE (justification + alinéa) - SECTIONS
+========================================================= */
+.section p {
+  max-width: 800px;
+  margin-bottom: 20px;
+  color: var(--text-muted);
+  text-align: justify;
+  text-indent: 1.6em;
 }
 
-footer a {
-    color: var(--gold);
-    text-decoration: underline;
+/* Pas d’alinéa sur le 1er paragraphe juste après un H2 */
+.section h2 + p {
+  text-indent: 0;
 }
 
-footer a:hover {
-    text-decoration: none;
+/* On évite justification/alinéa dans les cartes/steps (lisibilité) */
+.card p,
+.argument p,
+.step p,
+.faq p {
+  text-align: left;
+  text-indent: 0;
 }
 
-/* KICKER */
-.kicker {
-    opacity: 0.8;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    font-size: 13px;
-    margin-bottom: 14px;
-    color: var(--text-muted);
+/* =========================================================
+   10) LISTES SERVICES
+========================================================= */
+.services {
+  list-style: none;
+  max-width: 800px;
 }
 
-/* HERO CTA */
-.hero-cta {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-top: 18px;
+.services li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
 }
 
-/* GRILLES */
+/* =========================================================
+   11) BOUTONS
+========================================================= */
+.btn-primary,
+.btn-secondary,
+.btn-tertiary {
+  display: inline-block;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+/* Primary (dégradé or) */
+.btn-primary {
+  background: linear-gradient(135deg, #b8923e 0%, #c8a24a 50%, #e2c67a 100%);
+  color: #0b0f14;
+  box-shadow:
+    0 6px 18px rgba(200,162,74,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.25);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #a88334 0%, #b8923e 50%, #d9bc6b 100%);
+  transform: translateY(-1px);
+}
+
+/* Secondary (outline or) */
+.btn-secondary {
+  border: 2px solid var(--gold);
+  color: var(--gold);
+}
+
+.btn-secondary:hover {
+  background: var(--gold);
+  color: #0b0f14;
+}
+
+/* Tertiary (transparent) */
+.btn-tertiary {
+  font-weight: 700;
+  color: var(--text-main);
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.03);
+}
+
+.btn-tertiary:hover {
+  border-color: rgba(200,162,74,0.45);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   12) GRILLES / CARTES / FAQ
+========================================================= */
 .steps,
 .cards,
 .arguments {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-    margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 22px;
 }
 
-/* CARTES / BLOCS */
 .step,
 .card,
 .argument,
 .faq details {
-    padding: 18px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: var(--bg-card);
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-card);
 }
 
 .step h3,
 .card h3,
 .argument h3 {
-    margin-bottom: 8px;
-    font-size: 18px;
+  margin-bottom: 8px;
+  font-size: 18px;
 }
 
 /* FAQ */
 .faq summary {
-    cursor: pointer;
-    font-weight: 600;
-    color: var(--text-main);
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-main);
 }
 
 .faq p {
-    margin-top: 10px;
-    margin-bottom: 0;
-    color: var(--text-muted);
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: var(--text-muted);
 }
 
-/* AJUSTEMENTS */
+/* Ajustement marges internes */
 .card p,
 .argument p {
-    margin-bottom: 0;
-}
-.step p {
-  text-align: left;
-  text-indent: 0;
+  margin-bottom: 0;
 }
 
-/* =========================
-   EN-TETE / TOPBAR
-========================= */
-.topbar {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: rgba(11,15,20,0.88);
-    backdrop-filter: blur(10px);
+/* =========================================================
+   13) SEPARATEUR FIN DE PAGE
+========================================================= */
+.page-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(200,162,74,0.18) 20%,
+    rgba(200,162,74,0.55) 50%,
+    rgba(200,162,74,0.18) 80%,
+    transparent 100%
+  );
 }
 
-/* Ligne or premium sous la topbar */
-.topbar::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(200,162,74,0.25) 15%,
-        rgba(200,162,74,0.65) 50%,
-        rgba(200,162,74,0.25) 85%,
-        transparent 100%
-    );
+/* =========================================================
+   14) FOOTER
+========================================================= */
+footer {
+  background: #080b10;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 30px 0;
+  font-size: 14px;
 }
 
-.topbar-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 0;
-}
-
-.brand img {
-    height: 52px;
-    width: auto;
-    display: block;
-}
-
-.nav {
-    display: flex;
-    gap: 18px;
-    align-items: center;
-}
-
-.nav a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.nav a:hover {
-    color: var(--text-main);
-}
-
-.nav-cta {
-    padding: 10px 14px;
-    border: 1px solid var(--gold);
-    border-radius: 6px;
-    color: var(--gold) !important;
-}
-
-.nav-cta:hover {
-    background: var(--gold);
-    color: #0b0f14 !important;
-}
-
-/* ===== G / MOBILE CABINET ===== */
-@media (max-width: 720px){
-  .hero{
-    padding: 86px 0 66px;
-    background-position: center;
-  }
-
-  .hero h1{
-    font-size: 30px;
-    line-height: 1.15;
-  }
-
-  .subtitle{
-    font-size: 17px;
-  }
-
-  .btn-primary, .btn-secondary, .btn-tertiary{
-    width: 100%;
-    text-align: center;
-  }
-
-  .section{
-    padding: 62px 0;
-  }
-
-  .steps, .cards, .arguments{
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-}
-
-@media (max-width: 720px) {
-    .brand img { height: 42px; }
-    .nav { display: none; }
-    .hero { padding: 90px 0 70px; background-position: center; }
-}
-
-@media (max-width: 720px) {
-  .hero h1 { font-size: 30px; }
-  .subtitle { font-size: 17px; }
-  .section { padding: 64px 0; }
-}
-
-/* =========================
-   FOOTER PREMIUM
-========================= */
+/* Footer premium */
 .footer-inner {
   padding: 34px 0;
   display: flex;
@@ -388,7 +437,7 @@ footer a:hover {
 }
 
 .footer-mark {
-  height: 32px;
+  height: 24px; /* signature discrète */
   width: auto;
   opacity: 0.9;
 }
@@ -432,9 +481,9 @@ footer a:hover {
   opacity: 0.85;
 }
 
-/* =========================
-   MICRO-ANIMATIONS
-========================= */
+/* =========================================================
+   15) MICRO-ANIMATIONS
+========================================================= */
 .step, .card, .argument, .faq details {
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
@@ -445,144 +494,38 @@ footer a:hover {
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
-/* =========================
-   LIENS (GLOBAL)
-========================= */
-a {
-  color: var(--gold);
-  text-decoration: underline;
+/* =========================================================
+   16) RESPONSIVE / MOBILE
+========================================================= */
+@media (max-width: 720px) {
+  .brand img { height: 42px; }
+  .nav { display: none; }
+
+  .hero {
+    padding: 86px 0 66px;
+    background-position: center;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+    line-height: 1.15;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .btn-primary, .btn-secondary, .btn-tertiary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section {
+    padding: 62px 0;
+  }
+
+  .steps, .cards, .arguments {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
 }
-
-a:hover {
-  color: var(--gold-hover);
-  text-decoration: none;
-}
-
-/* ===== A / KICKER SECTION ===== */
-.section-kicker{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  color: var(--text-muted);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-.section-kicker::before{
-  content:"";
-  width: 40px;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(200,162,74,0.0), rgba(200,162,74,0.9));
-}
-
-/* ===== B / RYTHME VERTICAL ===== */
-.section-hero-rhythm{
-  padding: 96px 0;
-}
-
-/* ===== C / SEPARATEUR FIN DE PAGE ===== */
-.page-divider{
-  height: 1px;
-  width: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(200,162,74,0.18) 20%,
-    rgba(200,162,74,0.55) 50%,
-    rgba(200,162,74,0.18) 80%,
-    transparent 100%
-  );
-}
-
-/* ===== D / BOUTON TERTIAIRE ===== */
-.btn-tertiary{
-  display:inline-block;
-  padding: 14px 28px;
-  border-radius: 4px;
-  text-decoration:none;
-  font-weight:700;
-  color: var(--text-main);
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.03);
-  transition: all 0.25s ease;
-}
-.btn-tertiary:hover{
-  border-color: rgba(200,162,74,0.45);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-  transform: translateY(-1px);
-}
-
-/* ===== E / LEAD PARAGRAPH ===== */
-.lead{
-  font-size: 18px;
-  line-height: 1.8;
-  color: var(--text-main);
-  max-width: 780px;
-}
-
-/* ===== F / LEGAL BOX ===== */
-.legal-box{
-  max-width: 820px;
-  margin: 0 auto;
-  padding: 26px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: rgba(255,255,255,0.03);
-}
-.legal-box h1, .legal-box h2{
-  margin-top: 18px;
-}
-
-/* =========================
-   TITRES DE SECTION
-========================= */
-.section h2 {
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  position: relative;
-  padding-left: 56px;
-  margin-bottom: 24px;
-  color: var(--text-main);
-}
-
-/* trait avant le titre */
-.section h2::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 40px;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    rgba(200,162,74,0.0),
-    rgba(200,162,74,0.9)
-  );
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
