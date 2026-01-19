@@ -293,6 +293,37 @@ footer a:hover {
     color: #0b0f14 !important;
 }
 
+/* ===== G / MOBILE CABINET ===== */
+@media (max-width: 720px){
+  .hero{
+    padding: 86px 0 66px;
+    background-position: center;
+  }
+
+  .hero h1{
+    font-size: 30px;
+    line-height: 1.15;
+  }
+
+  .subtitle{
+    font-size: 17px;
+  }
+
+  .btn-primary, .btn-secondary, .btn-tertiary{
+    width: 100%;
+    text-align: center;
+  }
+
+  .section{
+    padding: 62px 0;
+  }
+
+  .steps, .cards, .arguments{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
 @media (max-width: 720px) {
     .brand img { height: 42px; }
     .nav { display: none; }
@@ -469,6 +500,7 @@ a:hover {
 .legal-box h1, .legal-box h2{
   margin-top: 18px;
 }
+
 
 
 
