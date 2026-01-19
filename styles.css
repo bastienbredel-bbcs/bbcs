@@ -71,10 +71,10 @@ body {
   align-items:center;
   gap:10px;
   color: var(--text-muted);
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   position: relative;
-  font-size: 40px;
+  font-size: 26px;
   padding-left: 38px;
   font-weight: 600;
   margin-bottom: 14px;
@@ -546,6 +546,7 @@ a:hover {
     rgba(200,162,74,0.9)
   );
 }
+
 
 
 
