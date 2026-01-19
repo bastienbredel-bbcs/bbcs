@@ -66,27 +66,32 @@ body {
     background-color: var(--bg-secondary);
 }
 
+/* =========================
+   TITRES DE SECTION – STYLE PRINCIPAL
+========================= */
 .section h2 {
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  color: var(--text-muted);
+  font-size: 26px;        /* ← ICI la taille */
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   position: relative;
-  font-size: 26px;
   padding-left: 38px;
-  font-weight: 600;
   margin-bottom: 14px;
+  color: var(--text-muted);
 }
-.section h2::before{
+
+.section h2::before {
   content:"";
   position:absolute;
   left:0;
   top:55%;
-  width: 30px;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(200,162,74,0.0), rgba(200,162,74,0.9));
+  width:28px;
+  height:1px;
+  background: linear-gradient(
+    90deg,
+    rgba(200,162,74,0.0),
+    rgba(200,162,74,0.9)
+  );
 }
 
 .section p {
@@ -546,6 +551,7 @@ a:hover {
     rgba(200,162,74,0.9)
   );
 }
+
 
 
 
