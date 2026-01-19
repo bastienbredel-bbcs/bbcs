@@ -248,6 +248,7 @@ footer a:hover {
 .card p,
 .argument p {
     margin-bottom: 0;
+}
 .step p {
   text-align: left;
   text-indent: 0;
@@ -562,6 +563,7 @@ a:hover {
     rgba(200,162,74,0.9)
   );
 }
+
 
 
 
