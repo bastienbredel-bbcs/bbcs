@@ -50,6 +50,11 @@ body {
     margin-bottom: 20px;
 }
 
+.hero p {
+  text-align: justify;
+  text-indent: 1.6em; /* alinéa */
+}
+
 .subtitle {
     font-size: 20px;
     margin-bottom: 30px;
@@ -243,6 +248,9 @@ footer a:hover {
 .card p,
 .argument p {
     margin-bottom: 0;
+.step p {
+  text-align: left;
+  text-indent: 0;
 }
 
 /* =========================
@@ -554,6 +562,7 @@ a:hover {
     rgba(200,162,74,0.9)
   );
 }
+
 
 
 
