@@ -394,6 +394,18 @@ a:hover {
 }
 
 /* =========================================================
+   12bis) LEGAL (Mentions légales)
+========================================================= */
+.legal-box {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 26px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+}
+
+/* =========================================================
    13) SEPARATEUR FIN DE PAGE
 ========================================================= */
 .page-divider {
@@ -529,4 +541,5 @@ footer {
     gap: 14px;
   }
 }
+
 
