@@ -269,7 +269,7 @@ a:hover {
    09) TEXTE (justification + alinéa) - SECTIONS
 ========================================================= */
 .section p {
-  max-width: 800px;
+  max-width: 850px;
   margin-bottom: 20px;
   color: var(--text-muted);
   text-align: justify;
@@ -601,6 +601,7 @@ footer {
     right: 4px;
   }
 }
+
 
 
 
