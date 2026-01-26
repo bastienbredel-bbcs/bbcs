@@ -552,7 +552,6 @@ footer {
     gap: 14px;
   }
 
-  /* 🔽 AJOUT RECOMMANDÉ POUR LES TITRES */
   h2 {
     font-size: 17px;
     line-height: 1.25;
@@ -564,6 +563,12 @@ footer {
   }
 }
 
+ /* FAQ – flèche modernisée conservée sur mobile */
+  summary::after {
+    transform: translateY(-50%) rotate(90deg);
+    opacity: 0.6;
+  }
+}
 
 
 
